@@ -78,7 +78,7 @@ const getNextDate = (datesArray) => {
     return (
     <>
         <div className="satsang-timing">
-        <h2>Upcoming Satsangg </h2>
+        <h2>Upcoming Satsang </h2>
 
         <div className="timing-item">
             <h3>Every Sunday</h3>
