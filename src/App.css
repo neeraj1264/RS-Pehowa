@@ -1,0 +1,72 @@
+
+:root {
+  --skyblue: rgb(0, 136, 255);
+  --shadow: deepskyblue;
+}
+.address h2 , .satsang-timing h2 , .notice h2 , .section-head , .about h1 {
+  text-align: center;
+  margin-top: 4rem;
+  color: var(--skyblue);
+  box-shadow: 5px 5px 5px var(--shadow);
+  width: fit-content;
+  margin: 4rem auto;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+}
+.satsang-section , .shabad-section , .sakhi-section{
+  margin: 3rem 1rem ;
+  padding: 0 0 1rem 0;
+  border: 1px solid #333333;
+  box-shadow: 0 0 20px 5px black;
+  }
+  .satsang , .shabad{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem 0 0 1rem;
+}
+.satsangm , .shabadm{
+    display: flex;
+    flex-wrap: wrap;
+}
+.satsang-video{
+  margin: 2rem 1rem;
+  }
+  
+@media (max-width: 768px) {
+  #banner {
+      height: 30vh;
+  }
+  .notice-content{
+      margin: 3rem 2rem;
+  }
+  .map iframe {
+      height: 400px;
+  }
+  .satsang-video iframe{
+      width: 300px;
+  }
+  .nav-links {
+      display: none;
+  }
+
+  .nav-links.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 57px;
+      left: 0;
+      width: 100%;
+      background-color: #262525;
+      z-index: 1000;
+  }
+
+  .nav-links.active li {
+      margin: 10px;
+  }
+  .toggle-button {
+      display: block;
+  }
+  .about p {
+      padding: 1rem;
+  }
+}

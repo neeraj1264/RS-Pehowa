@@ -1,0 +1,12 @@
+
+.address .map h4{
+    padding: 2rem 0;
+}
+.address .map{
+    border: 1px solid #333333;
+    box-shadow: 5px 5px 10px black;
+    text-align: center;
+    display: block;
+    margin: 1rem 5%;
+    padding: .4rem;
+}
