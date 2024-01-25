@@ -12,13 +12,13 @@ function Banner() {
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src="./src/assets/banner.jpeg" className="d-block w-100" alt="..."/>
+      <img src="public\banner.jpeg" className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
-    <img src="./src/assets/banner.jpeg" className="d-block w-100" alt="..."/>
+    <img src="public\banner.jpeg" className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
-    <img src="./src/assets/banner.jpeg"className="d-block w-100" alt="..."/>
+    <img src="public\banner.jpeg"className="d-block w-100" alt="..."/>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
