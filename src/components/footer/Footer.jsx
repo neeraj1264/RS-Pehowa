@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
      <footer>
-            <div className="footer-content">
+            <div className="footer-content bg-dark">
                 <p> <span>Copyright </span>&copy; 2024 <br/>Radha Swami Satsang Gher <span> Pehowa </span></p>
             </div>
         </footer>
