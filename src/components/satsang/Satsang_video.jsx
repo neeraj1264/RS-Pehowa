@@ -12,7 +12,7 @@ const Satsang_video = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("/src/components/satsang/Satsang.json");
+      const response = await axios.get("/Satsang.json");
       setJsonData(response.data);
       console.log("Fetched data:", response.data);
     } catch (error) {

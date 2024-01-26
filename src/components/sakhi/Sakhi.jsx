@@ -12,7 +12,7 @@ function Sakhi() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("/src/components/sakhi/Sakhi.json");
+      const response = await axios.get("/Sakhi.json");
       setJsonData(response.data);
       console.log("Fetched data:", response.data);
     } catch (error) {
