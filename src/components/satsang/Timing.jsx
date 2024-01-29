@@ -1,24 +1,24 @@
 import React, {useState} from 'react'
 import './Timing.css'
 import Timer from '../timerlogic/Timer';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function Timing() {
 
 const newMoonDates = [
-// Dates array for new moon events
-new Date('2024-01-11 10:00'),
-new Date('2024-02-09 10:00'),
-new Date('2024-03-10 10:00'),
-new Date('2024-04-08 10:00'),
-new Date('2024-05-07 10:00'),
-new Date('2024-06-06 10:00'),
-new Date('2024-07-05 10:00'),
-new Date('2024-08-04 10:00'),
-new Date('2024-09-02 10:00'),
-new Date('2024-10-02 10:00'),
-new Date('2024-11-01 10:00'),
-new Date('2024-11-30 10:00'),
-new Date('2024-12-30 10:00'),
+    // Dates array for new moon events
+    new Date('2024-01-11 10:00'),
+    new Date('2024-02-09 10:00'),
+    new Date('2024-03-10 10:00'),
+    new Date('2024-04-08 10:00'),
+    new Date('2024-05-07 10:00'),
+    new Date('2024-06-06 10:00'),
+    new Date('2024-07-05 10:00'),
+    new Date('2024-08-04 10:00'),
+    new Date('2024-09-02 10:00'),
+    new Date('2024-10-02 10:00'),
+    new Date('2024-11-01 10:00'),
+    new Date('2024-11-30 10:00'),
+    new Date('2024-12-30 10:00'),
 ];
 
 const fullMoonDates = [
@@ -54,73 +54,49 @@ const getNextDate = (datesArray) => {
     return upcomingDates.length > 0 ? upcomingDates[0] : null;
     };
 
-    const [currentSundayIndex, setCurrentSundayIndex] = useState(0);
-    const [currentAmavasyaIndex, setCurrentAmavasyaIndex] = useState(0);
-    const [currentPournimaIndex, setCurrentPournimaIndex] = useState(0);
+    const getNextEvent = () => {
+        const sundayTargetDate = getNextDate(nextSundayDates);
+        const amavasyaTargetDate = getNextDate(newMoonDates);
+        const pournimaTargetDate = getNextDate(fullMoonDates);
     
-    // const handleSundayTimerExpire = () => {
-    // setCurrentSundayIndex((prevIndex) => prevIndex + 1);
-    // };
-
-    // const handleAmavasyaTimerExpire = () => {
-    // setCurrentAmavasyaIndex((prevIndex) => prevIndex + 1);
-    // };
-
-    // const handlePournimaTimerExpire = () => {
-    // setCurrentPournimaIndex((prevIndex) => prevIndex + 1);
-    // };
-
-    const sundayTargetDate = getNextDate(nextSundayDates, currentSundayIndex);
-    const amavasyaTargetDate = getNextDate(newMoonDates, currentAmavasyaIndex);
-    const pournimaTargetDate = getNextDate(fullMoonDates, currentPournimaIndex);
-
+        const events = [
+          { name: 'Sunday', targetDate: sundayTargetDate },
+          { name: 'Amavasya', targetDate: amavasyaTargetDate },
+          { name: 'Pournima', targetDate: pournimaTargetDate },
+        ];
     
-    return (
-    <>
-        <div className="satsang-timing">
-        <h2>Upcoming Satsang </h2>
+        // Sort events by targetDate in ascending order
+        events.sort((a, b) => a.targetDate - b.targetDate);
+    
+        return events;
+      };
+    
+      const [sortedEvents, setSortedEvents] = useState(getNextEvent());
+    
+      return (
+        <>
+      <div className="satsang-timing">
+        <h2>Upcoming Satsang</h2>
 
-        <div className="timing-item">
-            <h3>Every Sunday</h3>
-            {sundayTargetDate ? (
-            <>
-                <Timer targetDate={sundayTargetDate} elementId="sundayTimer" />
-                <p id="sunday">{sundayTargetDate.toDateString()}</p>
-                <p>Timing: 09:30 AM</p>
-            </>
-            ) : (
-            <p>No upcoming Sunday satsang</p>
-            )}
-        </div>
-
-        <div className="timing-item">
-            <h3>Amavasya Satsang</h3>
-            {amavasyaTargetDate ? (
-            <>
-                <Timer targetDate={amavasyaTargetDate} elementId="amavasyaTimer" />
-                <p id="amavasya">{amavasyaTargetDate.toDateString()}</p>
-                <p>Timing: 10:00 AM</p>
-            </>
-            ) : (
-            <p>No upcoming Amavasya satsang</p>
-            )}
-        </div>
-
-        <div className="timing-item">
-            <h3>Pournima Satsang</h3>
-            {pournimaTargetDate ? (
-            <>
-                <Timer targetDate={pournimaTargetDate} elementId="pournimaTimer" />
-                <p id="pournima">{pournimaTargetDate.toDateString()}</p>
-                <p>Timing: 10:00 AM</p>
-            </>
-            ) : (
-            <p>No upcoming Pournima satsang</p>
-            )}
-        </div>
-        </div>
+        {sortedEvents.map((event) => (
+          <Link key={event.name} to={`/${event.name}`}>
+            <div className="timing-item">
+              <h3>{event.name} Satsang</h3>
+              {event.targetDate ? (
+                <>
+                  <Timer targetDate={event.targetDate} elementId={`${event.name.toLowerCase()}Timer`} />
+                  <p id={`${event.name.toLowerCase()}`}>{event.targetDate.toDateString()}</p>
+                  <p>Timing: {event.name === 'Sunday' ? '09:30 AM' : '10:00 AM'}</p>
+                </>
+              ) : (
+                <p>No upcoming {event.name} satsang</p>
+              )}
+            </div>
+          </Link>
+        ))}
+      </div>
     </>
-    );
-}
-
-export default Timing;
+      );
+    }
+    
+    export default Timing;

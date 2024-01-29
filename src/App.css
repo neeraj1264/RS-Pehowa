@@ -3,6 +3,9 @@
   --skyblue: rgb(0, 136, 255);
   --shadow: deepskyblue;
 }
+a{
+    text-decoration: none;
+}
 .address h2 , .satsang-timing h2 , .notice h2 , .section-head , .about h1 {
   text-align: center;
   margin-top: 4rem;
