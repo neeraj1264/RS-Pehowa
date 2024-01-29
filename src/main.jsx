@@ -5,10 +5,12 @@ import './App.css'
 import './index.css'
 import { BrowserRouter, Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import App from './App';
+import ArrowTop from './components/icons/ArrowTop';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <App/>
+      <ArrowTop/>
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -22,7 +22,7 @@ function Sakhi() {
   return (
     <>
     <section className="quotes">
-        <h1>Baba Ji Ki Sakhi </h1><hr/>
+        <h1 className='section-head'>Baba Ji Ki Sakhi </h1>
         <div className="quote">
         {jsonData.map((item, index) => (
             <React.Fragment key={index}>
