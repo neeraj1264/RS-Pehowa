@@ -16,7 +16,7 @@ const SundayDates = () => {
 
   return (
     <div className="outer-card">
-      <h1 className="navbar-brand text-light fs-2">Pournima Date in 2024</h1>
+      <h1 className="navbar-brand text-light fs-2">Sunday Date in 2024</h1>
 
       <div id="amavasyaDatesContainer">
         {nextSundayDates.map((date, index) => (
