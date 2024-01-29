@@ -8,6 +8,7 @@ padding: 1rem;
     border: 1px solid #333333;
     box-shadow: 5px 5px 10px 10px black;
     margin: 0 12%;
+    margin-bottom: 9rem;
 }
 .about p span {
     color: var(--skyblue);

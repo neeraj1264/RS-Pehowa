@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 function Header() {
   return (
     <>
-     <nav className="navbar navbar-expand-lg bg-dark fixed-top">
-  <div className="container-fluid">
-    <Link to="/" className="navbar-brand text-white">Radha Swami Ji</Link>
+     <nav className="navbar navbar-expand-lg bg-dark fixed-top ">
+  <div className="container-fluid ">
+    <Link to="/" className="navbar-brand text-white ">Radha Swami Ji</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon bg-light"></span>
     </button>
@@ -16,9 +16,6 @@ function Header() {
           <Link to="/" className="nav-link active text-white" aria-current="page">Home</Link>
         </li>
         <li className="nav-item">
-          <Link to="/address"  className="nav-link  text-white" aria-disabled="true">Address</Link>
-        </li>
-        <li className="nav-item">
           <Link to="/Satsang" className="nav-link  text-white" aria-disabled="true">Satsang</Link>
         </li>
         <li className="nav-item">
@@ -26,9 +23,6 @@ function Header() {
         </li>
         <li className="nav-item">
           <Link to="/sakhi" className="nav-link  text-white" aria-disabled="true">Sakhi</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/about" className="nav-link  text-white" aria-disabled="true">About</Link>
         </li>
       </ul>
     </div>

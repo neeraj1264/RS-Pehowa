@@ -13,7 +13,7 @@
   padding: 0.3rem 1rem;
   border-radius: 1rem;
 }
-.satsang-section , .shabad-section , .sakhi-section{
+.satsang-section , .shabad-section , .sakhi-section , .quote{
   margin: 3rem 1rem ;
   padding: 0 0 1rem 0;
   border: 1px solid #333333;
@@ -31,7 +31,20 @@
 .satsang-video{
   margin: 2rem 1rem;
   }
-  
+  .satsangpagebtn{
+    padding: .5rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--skyblue);
+    box-shadow: 5px 5px 10px var(--shadow);
+    background-color: var(--skyblue);
+    display: flex;
+    margin: auto;
+    color: white;
+    border: none;  
+}
+.satsangpagebtn a{
+    color: rgb(6, 107, 196);
+}
 @media (max-width: 768px) {
   #banner {
       height: 30vh;

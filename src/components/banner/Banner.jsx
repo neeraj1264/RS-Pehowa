@@ -1,5 +1,10 @@
 import React from 'react'
 import Timing from '../satsang/Timing'
+import AddressSection from '../address/AddressSection'
+import Satsang_home from './Satsang_home'
+import Shabad_home from './Shabad_home'
+import Sakhi_home from './Sakhi_home'
+import About from '../about/About'
 
 function Banner() {
   return (
@@ -31,6 +36,11 @@ function Banner() {
   </button>
 </div>
 <Timing/>
+<AddressSection/>
+<Satsang_home/>
+<Shabad_home/>
+<Sakhi_home/>
+<About/>
     </>
   )
 }
