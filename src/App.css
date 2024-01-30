@@ -1,4 +1,20 @@
-
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .navbar {
+    height: 6vh;
+  }  
+  footer {
+    height: 10vh;
+    background-color: black; /* Add your preferred styles */
+  }  
 :root {
   --skyblue: rgb(0, 136, 255);
   --shadow: deepskyblue;

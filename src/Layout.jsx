@@ -5,9 +5,13 @@ function Layout() {
 
     return (
      <>
+         <div className="app-container">
      <Header/>
+     <div className='main-content'>
      <Outlet/>
+     </div>
      <Footer/>
+     </div>
      </>
     )
   }

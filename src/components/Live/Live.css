@@ -1,0 +1,42 @@
+.live-section{
+    margin: 5rem 2rem;
+    border: 1px solid #333333;
+    box-shadow: 0 0 20px 5px black;
+}
+.live {
+    display: block;
+    margin: 1rem auto;
+}
+.live-camera iframe{
+  display: block;
+  margin: auto;
+  width: 60rem;
+  height: 30rem;
+}
+.main-content {
+    flex-grow: 1;
+  }
+  @media (max-width: 991px) {
+    .live-camera iframe{
+        width: 40rem;
+        height: 20rem;
+      }
+}
+@media (max-width: 743px) {
+    .live-camera iframe{
+        width: 30rem;
+        height: 15rem;
+      }
+}
+@media (max-width: 579px) {
+    .live-camera iframe{
+        width: 20rem;
+        height: 15rem;
+      }
+}
+@media (max-width: 415px) {
+  .live-camera iframe{
+      width: 15rem;
+      height: 12rem;
+    }
+}

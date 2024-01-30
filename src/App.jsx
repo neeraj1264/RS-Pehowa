@@ -13,6 +13,7 @@ import Sakhi from './components/sakhi/Sakhi';
 import AmavasyaDates from './components/pages/Amavasya';
 import PournimaDates from './components/pages/Pournima';
 import SundayDates from './components/pages/Sunday';
+import Live from './components/Live/Live';
 
 const App = () => (
   <Routes>
@@ -24,6 +25,7 @@ const App = () => (
       <Route path="Amavasya" element={<AmavasyaDates/>} />
       <Route path="Pournima" element={<PournimaDates/>} />
       <Route path="Sunday" element={<SundayDates/>} />
+      <Route path="live" element={<Live/>} />
     </Route>
   </Routes>
 );

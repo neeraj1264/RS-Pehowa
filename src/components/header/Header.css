@@ -1,3 +1,7 @@
 .custom-color{
     color: var(--skyblue) !important;
   }
+  .navbar-toggler:hover {
+    border: none;
+   /* color: #3a3a3a; */
+   }

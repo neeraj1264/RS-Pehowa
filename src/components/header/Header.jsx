@@ -16,12 +16,12 @@ function Header() {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-dark fixed-top">
-        <div className="container-fluid">
+        <div className="container-fluid bg-dark">
           <Link to="/" className="navbar-brand text-white">
             Radha Swami Ji
           </Link>
           <button
-            className={`navbar-toggler ${navbarOpen ? 'collapsed' : ''}`}
+            className={`navbar-toggler ${navbarOpen ? 'collapsed' : ''} bg-dark`}
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -78,6 +78,16 @@ function Header() {
                   onClick={handleLinkClick}
                 >
                   Sakhi
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/live"
+                  className={({ isActive }) => `nav-link ${isActive ? 'custom-color' : 'text-white'}`}
+                  aria-disabled="true"
+                  onClick={handleLinkClick}
+                >
+                  Live Cam
                 </NavLink>
               </li>
             </ul>
