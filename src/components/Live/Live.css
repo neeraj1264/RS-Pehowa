@@ -36,7 +36,7 @@
 }
 @media (max-width: 415px) {
   .live-camera iframe{
-      width: 15rem;
+      width: 18rem;
       height: 12rem;
     }
 }
