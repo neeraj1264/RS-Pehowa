@@ -12,6 +12,7 @@
   margin: auto;
   width: 60rem;
   height: 30rem;
+  flex-wrap: wrap;
 }
 .main-content {
     flex-grow: 1;
@@ -34,9 +35,9 @@
         height: 15rem;
       }
 }
-/* @media (max-width: 415px) {
+@media (max-width: 415px) {
   .live-camera iframe{
       width: 18rem;
       height: 12rem;
     }
-} */
+}
