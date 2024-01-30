@@ -8,8 +8,6 @@ const Live = () => {
     <>
       <h2 className="section-head">Live Satsang</h2>
       <section className="live-section bg-dark" id="satsang">
-        <div className="live">
-              <div className="live-camera">
                 <iframe
                 //   width="100%"
                 //   height="100%"
@@ -20,8 +18,6 @@ const Live = () => {
                   allowFullScreen
                 ></iframe>
                 {/* <h4 style={{ whiteSpace: "pre-line" }}>Live Broadcast</h4> */}
-              </div>
-        </div>
       </section>
     </>
   );
