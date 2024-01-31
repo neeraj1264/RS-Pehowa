@@ -1,5 +1,5 @@
 .live-section{
-    margin: 5rem 2rem;
+    /* margin: 5rem 2rem; */
     border: 1px solid #333333;
     box-shadow: 0 0 20px 5px black;
 }
@@ -37,7 +37,7 @@
 }
 @media (max-width: 415px) {
   .live-camera iframe{
-      width: 18rem;
-      height: 12rem;
+    width: 20rem;
+    height: 14rem;
     }
 }
