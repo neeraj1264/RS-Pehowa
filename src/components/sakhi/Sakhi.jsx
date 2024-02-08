@@ -1,6 +1,6 @@
 import React,{useState , useEffect} from 'react'
 import axios from "axios";
-import './Sakhi.css'
+import './Sakhi.css';
 
 function Sakhi() {
 
@@ -22,6 +22,7 @@ function Sakhi() {
   return (
     <>
     <section className="quotes">
+      
         <h1 className='section-head'>Baba Ji Ki Sakhi </h1>
         <div className="quote">
         {jsonData.map((item, index) => (

@@ -80,7 +80,7 @@ function Header() {
                   Sakhi
                 </NavLink>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink
                   to="/live"
                   className={({ isActive }) => `nav-link ${isActive ? 'custom-color' : 'text-white'}`}
@@ -89,7 +89,7 @@ function Header() {
                 >
                   Live Cam
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

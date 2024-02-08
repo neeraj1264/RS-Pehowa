@@ -2,27 +2,34 @@
 import React, { useState, useEffect } from "react";
 import "./Satsang_video.css";
 import axios from "axios";
+import Loader from "../Loader";
 
 const Satsang_video = () => {
   const [jsonData, setJsonData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetchData();
-  }, []);
+      fetchData();
+    }, []);
 
   const fetchData = async () => {
     try {
       const response = await axios.get("/Satsang.json");
       setJsonData(response.data);
+      setIsLoading(false); 
       console.log("Fetched data:", response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
+      setIsLoading(false); 
     }
   };
 
   return (
     <>
       <h2 className="section-head">Satsang Videos</h2>
+      {isLoading ? (
+        <Loader />
+      ) : (
       <section className="satsang-section bg-dark" id="satsang">
         <div className="satsangm">
           {jsonData &&
@@ -48,6 +55,7 @@ const Satsang_video = () => {
             ))}
         </div>
       </section>
+       )}
     </>
   );
 };

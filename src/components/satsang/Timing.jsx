@@ -21,21 +21,21 @@ const newMoonDates = [
     new Date('2024-12-30 10:00'),
 ];
 
-const fullMoonDates = [
-    // Dates array for full moon events
-    new Date('2024-01-25 10:00'), 
-    new Date('2024-02-24 10:00'), 
-    new Date('2024-03-24 10:00'), 
-    new Date('2024-04-23 10:00'), 
-    new Date('2024-05-23 10:00'), 
-    new Date('2024-06-21 10:00'), 
-    new Date('2024-07-21 10:00'), 
-    new Date('2024-08-19 10:00'), 
-    new Date('2024-09-17 10:00'), 
-    new Date('2024-10-17 10:00'), 
-    new Date('2024-11-15 10:00'), 
-    new Date('2024-12-15 10:00'), 
-];
+// const fullMoonDates = [
+//     // Dates array for full moon events
+//     new Date('2024-01-25 10:00'), 
+//     new Date('2024-02-24 10:00'), 
+//     new Date('2024-03-24 10:00'), 
+//     new Date('2024-04-23 10:00'), 
+//     new Date('2024-05-23 10:00'), 
+//     new Date('2024-06-21 10:00'), 
+//     new Date('2024-07-21 10:00'), 
+//     new Date('2024-08-19 10:00'), 
+//     new Date('2024-09-17 10:00'), 
+//     new Date('2024-10-17 10:00'), 
+//     new Date('2024-11-15 10:00'), 
+//     new Date('2024-12-15 10:00'), 
+// ];
 
 const nextSundayDates =  [
     // Dates array for Sunday events
@@ -57,12 +57,12 @@ const getNextDate = (datesArray) => {
     const getNextEvent = () => {
         const sundayTargetDate = getNextDate(nextSundayDates);
         const amavasyaTargetDate = getNextDate(newMoonDates);
-        const pournimaTargetDate = getNextDate(fullMoonDates);
+        // const pournimaTargetDate = getNextDate(fullMoonDates);
     
         const events = [
           { name: 'Sunday', targetDate: sundayTargetDate },
           { name: 'Amavasya', targetDate: amavasyaTargetDate },
-          { name: 'Pournima', targetDate: pournimaTargetDate },
+          // { name: 'Pournima', targetDate: pournimaTargetDate },
         ];
     
         // Sort events by targetDate in ascending order

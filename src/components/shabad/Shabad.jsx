@@ -2,9 +2,11 @@
 import React, { useState, useEffect } from "react";
 import "./Shabad.css";
 import axios from "axios";
+import Loader from "../Loader";
 
 const Shabad = () => {
   const [jsonData, setJsonData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetchData();
@@ -14,8 +16,10 @@ const Shabad = () => {
     try {
       const response = await axios.get("/Shabad.json");
       setJsonData(response.data);
+      setIsLoading(false); 
       console.log("Fetched data:", response.data);
     } catch (error) {
+      setIsLoading(false); 
       console.error("Error fetching data:", error);
     }
   };
@@ -23,6 +27,9 @@ const Shabad = () => {
   return (
     <>
       <h2 className="section-head">Shabad Videos</h2>
+      {isLoading ? (
+        <Loader />
+      ) : (
       <section className="shabad-section bg-dark" id="shabad">
         <div className="shabadm">
           {jsonData &&
@@ -44,6 +51,8 @@ const Shabad = () => {
             ))}
         </div>
       </section>
+             )}
+
     </>
   );
 };
