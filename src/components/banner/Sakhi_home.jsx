@@ -15,7 +15,7 @@ function Sakhi() {
     try {
       const response = await axios.get("/Sakhi.json");
       setJsonData(response.data);
-      console.log("Fetched data:", response.data);
+      // console.log("Fetched data:", response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }

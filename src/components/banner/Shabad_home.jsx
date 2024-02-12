@@ -15,7 +15,7 @@ const Shabad = () => {
     try {
       const response = await axios.get("/Shabad.json");
       setJsonData(response.data);
-      console.log("Fetched data:", response.data);
+      // console.log("Fetched data:", response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
