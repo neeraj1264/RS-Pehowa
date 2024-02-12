@@ -1,6 +1,7 @@
 // YourComponent.jsx or YourComponent.tsx
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
+import YouTube from 'react-youtube';
 import "../satsang/Satsang_video.css";
 import axios from "axios";
 
@@ -21,6 +22,17 @@ const Satsang_video = () => {
     }
   };
 
+  const opts = {
+    height: '200',
+    width: '350',
+    playerVars: {
+        autoplay: 0,
+        controls: 1,
+        modestbranding: 1,
+        showinfo: 0,
+        loop: 1,
+      },
+  };
   return (
     <>
       <h2 className="section-head">Satsang Videos</h2>
@@ -28,16 +40,11 @@ const Satsang_video = () => {
         <div className="satsangm">
           {jsonData.slice(0, 3).map((item) => (
             <div key={item.iframe} className="satsang-video">
-              {/* Embed iframe */}
-              <iframe
-                width="350"
-                height="200"
-                src={`https://www.youtube.com/embed/${item.iframe}`}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <YouTube
+                videoId={item.id}
+                opts={opts}
+           
+              />
 
               {/* Title (h4) */}
               <h4 style={{ whiteSpace: "pre-line" }}>{item.h4}</h4>
