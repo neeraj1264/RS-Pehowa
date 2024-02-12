@@ -9,7 +9,7 @@ import About from '../about/About'
 function Banner() {
   return (
     <>
-   <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+   <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" style={{marginTop: '3rem'}}>
   <div className="carousel-inner">
     <div className="carousel-item active">
       <img src="/banner.jpeg" className="d-block w-100" alt="..."/>
