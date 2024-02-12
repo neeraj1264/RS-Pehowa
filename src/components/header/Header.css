@@ -5,3 +5,6 @@
     border: none;
    /* color: #3a3a3a; */
    }
+   .navbar{
+    border-radius: 0 0 1rem 1rem ;
+   }

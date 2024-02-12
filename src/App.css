@@ -33,10 +33,10 @@ a{
   border-radius: 1rem;
 }
 .satsang-section , .shabad-section , .sakhi-section , .quote{
-  margin: 3rem 1rem ;
+  margin: 3rem 1rem;
   padding: 0 0 1rem 0;
-  border: 1px solid #333333;
-  box-shadow: 0 0 20px 5px black;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 1rem;
   }
   .satsang , .shabad{
     display: flex;
@@ -48,7 +48,10 @@ a{
     flex-wrap: wrap;
 }
 .satsang-video{
-  margin: 2rem 1rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: -5px -5px 15px black;
   }
   .satsangpagebtn{
     padding: .5rem 1.5rem;
@@ -75,7 +78,8 @@ a{
       height: 400px;
   }
   .satsang-video iframe{
-      width: 300px;
+      width: 100%;
+      height: auto;
   }
   .nav-links {
       display: none;

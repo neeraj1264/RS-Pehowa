@@ -6,6 +6,7 @@ import axios from "axios";
 
 const Satsang_video = () => {
   const [jsonData, setJsonData] = useState([]);
+  const [loading, SetLoading] = useState(true)
 
   useEffect(() => {
     fetchData();
@@ -15,9 +16,11 @@ const Satsang_video = () => {
     try {
       const response = await axios.get("/Satsang.json");
       setJsonData(response.data);
+      SetLoading(false)
       // console.log("Fetched data:", response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
+      SetLoading(false)
     }
   };
 
@@ -25,9 +28,10 @@ const Satsang_video = () => {
     <>
       <h2 className="section-head">Satsang Videos</h2>
       <section className="satsang-section bg-dark" id="satsang">
-        <div className="satsangm">
+        {loading && <img src="gif.gif" alt="Loading" style={{width: '100%'}}/>}
+        <div className={"satsangm"}>
           {jsonData.slice(0, 3).map((item) => (
-            <div key={item.iframe} className="satsang-video">
+            <div key={item.iframe} className='satsang-video'>
               {/* Embed iframe */}
               <iframe
                 width="350"
