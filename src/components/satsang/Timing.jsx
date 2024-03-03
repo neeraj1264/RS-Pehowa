@@ -47,6 +47,17 @@ const nextSundayDates =  [
     new Date('2024-02-11 09:30'),
     new Date('2024-02-18 09:30'),
     new Date('2024-02-25 09:30'),
+
+    new Date('2024-03-03 09:30'),
+    new Date('2024-03-10 09:30'),
+    new Date('2024-03-17 09:30'),
+    new Date('2024-03-24 09:30'),
+    new Date('2024-03-31 09:30'),
+    new Date('2024-04-07 09:30'),
+    new Date('2024-04-14 09:30'),
+    new Date('2024-04-21 09:30'),
+    new Date('2024-04-28 09:30'),
+    
 ];
 const getNextDate = (datesArray) => {
     const now = new Date().getTime();
