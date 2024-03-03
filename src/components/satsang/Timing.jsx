@@ -8,7 +8,7 @@ const newMoonDates = [
     // Dates array for new moon events
     new Date('2024-01-11 10:00'),
     new Date('2024-02-09 10:00'),
-    new Date('2024-03-10 10:00'),
+    new Date('2024-03-10 09:30'),
     new Date('2024-04-08 10:00'),
     new Date('2024-05-07 10:00'),
     new Date('2024-06-06 10:00'),
